@@ -1,0 +1,61 @@
+#projects{
+    text-align: center;
+
+    
+    h2{
+
+    }
+    .container{
+        margin-top: 10vh;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        .card{
+            width: 40vw;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  
+            align-items: center;  
+            border: 1px solid red;
+            padding: 1rem;        
+            .title{
+
+            }
+            .image{
+                height: 80%;
+                width: 80%;
+                border: 1px solid gray;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .info{}
+            .links{
+                display: flex;
+                gap: 2rem;
+                span{
+                    border-radius: 50%;
+                    border: 1px solid var(--font);
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a{
+                        font-size: 2rem;
+                        position: relative;
+                        color: var(--font);
+                        &:hover{
+                            color: var(--navfonthover);
+                        }
+                        i{
+                           
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

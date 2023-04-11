@@ -1,0 +1,344 @@
+
+
+
+//-------NAV--------
+html{
+    background-color: var(--bg);
+}
+nav{
+    display: flex;
+    top: 0;
+    position: sticky;
+    font-size: 1.5rem;
+    height: 12vh;
+    width: 100%;
+    transition: .3s all ease-in-out;
+    background-color: var(--nav);
+    z-index: 5;
+
+    a{
+        color: var(--navfont);
+        text-decoration: none;
+        &:hover{
+            color: var(--navfonthover);
+        }
+    }
+
+    .logo{
+        margin: 1.5rem ;
+    }
+    .darkMode,.menu{
+        aspect-ratio: 1/1;
+        height: 2.7rem;
+        border-radius: 1em;
+        position: absolute;
+        margin-top: .7rem;
+        overflow: hidden;
+        right: 20%;
+        border: 1px solid var(--navfont);
+        .icon{
+            position: absolute;
+            width: 2.5rem;
+            aspect-ratio: 1/1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            transition: .5s all ease-in-out;
+            i{
+                color: var(--navfont);
+                &:hover{
+                    color: var(--navfonthover);
+                }
+            }
+        }
+        .icon:nth-child(1){
+            transform: translateX(0%);
+        }
+        .icon:nth-child(2){
+            transform: translateX(100%);
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .menu{
+        right: 1%;
+        border: blue 1px solid ;
+        .icon:nth-child(2){
+            opacity: 0;
+            transform: translateX(0%);
+            transition: all ease-in-out 0s;
+        }
+        .icon:nth-child(1){
+            opacity: 1;
+            transform: translateX(0%);
+            transition: all ease-in-out 0s;
+        }
+
+        &.active{
+            .icon:nth-child(1){
+                opacity: 0;
+            }
+            .icon:nth-child(2){
+                opacity: 1;
+
+            }
+        }
+    }
+    
+    .darkMode.active{
+        .icon:nth-child(1){
+            transform: translateX(-100%);
+        }
+        .icon:nth-child(2){
+            transform: translateX(0%);
+        }
+    }
+
+    ul{
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        right: 50%;
+        top: 100%;
+        transform: translate(50%,0%);
+        display: grid;
+        text-align: center;
+        // transition: .5s all ease-in-out;
+        background-color: var(--nav);
+        border-radius: 0em 0em .3em .3em;
+
+        li{
+            list-style: none;
+            margin: 0 1.5rem;
+
+            .active-link{
+                color: var(--navfonthover);
+            }
+        }
+    }
+    .menuItems.active{
+        height: 300%;
+    }
+}
+
+// SKILLS-----------------------
+.section:nth-child(3).active{
+    h2{
+        margin-top: 0vh;
+        font-size: 1.8rem;
+        transition: .5s all ease-in-out;
+
+    }
+    .skills:nth-child(2){
+        h3{
+            animation: fadeInLeft 1s forwards ;
+        }
+        .container{
+            div{
+                animation: fadeInLeft 1s forwards ;
+            }
+            div:nth-child(-n+3){
+                animation-delay: .3s;
+            }
+             div:nth-child(n+4){
+                animation-delay: .6s;
+            }
+             div:nth-child(n+7){
+                animation-delay: .9s;
+            }
+        }
+    }
+    .skills:nth-child(3){
+        h3{
+            animation: fadeInRight 1s forwards ;
+        }
+        .container{
+            div{
+                animation: fadeInRight 1s forwards ;
+            }
+            div:nth-child(-n+2){
+                animation-delay: .3s;
+            }
+             div:nth-child(n+3){
+                animation-delay: .6s;
+            }
+             div:nth-child(n+5){
+                animation-delay: .9s;
+            }
+        }
+    }
+}
+
+.section:nth-child(3){
+    padding-top: 10vh;
+    width: 100%;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 1fr;
+    grid-template-areas: 
+    "title"
+    "skill1" 
+    "skill2";
+    h2{
+        grid-area:title;
+        color: var(--font);
+        font-size: .1rem;
+    }
+    .skills:nth-child(2), .skills:nth-child(3){
+        margin-top: 5vh;
+       
+
+        h3{
+            opacity: 0;
+        }
+       .container{
+            margin-top: 5vh;
+            display: grid;
+            justify-content: center;
+            text-align: center;
+
+            
+
+            .skill{
+                width: 50%;
+                margin-left: 25%;
+                margin-bottom: 15%;
+                display: grid;
+                justify-content: center;
+                opacity: 0;
+
+
+                span:nth-child(1){
+                    width: 60px;
+                    height: 80px;
+                    margin: auto;
+                    background-color: rgb(187, 187, 187);
+                    display: flex;
+                    justify-content: center;
+                    border-radius: 25% 25% 35% 35%;
+                    align-items: center;
+                    
+                    img{
+                        margin-top: 12%;
+                        width: 80%;
+                        height: 80%;
+
+                    }
+                }
+                
+                span:nth-child(2){
+                    margin-top: .3rem;
+                    position: relative;
+                    width: 6rem;
+                    font-weight: 800;
+                }
+                span:nth-child(3){
+                    position: relative;
+                    width: 6rem;
+                    font-size: .8rem;
+                }
+                &:hover{
+                    & img{
+                        // display: inline-block;
+                        animation: bounce .3s linear ;
+                        // transition: .13s all ease-in;
+                        // transform: translateY(-150px);
+                        // border: 1px solid red;
+                        // cursor: pointer;
+                    }
+                } 
+            }
+       }
+    }
+    .skills:nth-child(3){
+        grid-area: skill2;
+        margin-left: 10%;
+
+        .container{
+            grid-template-columns: 1fr 1fr;
+       }
+    }
+    .skills:nth-child(2){
+        grid-area: skill1;
+        .container{
+            grid-template-columns: 1fr 1fr;
+       }
+    }
+}
+
+
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(-15%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@media only screen and (min-width: 600px) {
+    nav{
+        display: flex;
+        top: 0;
+        position: sticky;
+        font-size: 1.5rem;
+        height: 10vh;
+        width: 100%;
+    
+        .menu{
+            display: none;
+        }
+
+        .darkMode{
+            right: 10% ;
+            margin: .7rem ;
+            position: absolute;
+        }
+
+        .logo{
+            margin: 1rem ;
+        }
+        ul{
+            position: absolute;
+            height: 100%;
+            right: 0%;
+            top: 0%;
+            display: flex;
+            text-align: center;
+            justify-content: start;
+            width: 50%;
+            transform: translate(0%,0%);
+            li{
+                margin: 1rem ;
+            }
+        }
+    }
+
+// SKILLS-----------------------
+    .section:nth-child(3){
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas: 
+        "title title"
+        "skill1 skill2";
+        .skills:nth-child(2){
+            .container{
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
