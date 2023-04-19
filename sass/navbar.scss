@@ -64,7 +64,6 @@ nav{
     }
     .menu{
         right: 1%;
-        border: blue 1px solid ;
         .icon:nth-child(2){
             opacity: 0;
             transform: translateX(0%);
@@ -125,7 +124,7 @@ nav{
 }
 
 // SKILLS-----------------------
-.section:nth-child(3).active{
+#skills.active{
     h2{
         margin-top: 0vh;
         font-size: 1.8rem;
@@ -172,9 +171,8 @@ nav{
     }
 }
 
-.section:nth-child(3){
+#skills{
     padding-top: 10vh;
-    width: 100%;
     display: grid;
     text-align: center;
     grid-template-columns: 1fr;
@@ -190,7 +188,6 @@ nav{
     }
     .skills:nth-child(2), .skills:nth-child(3){
         margin-top: 5vh;
-       
 
         h3{
             opacity: 0;
@@ -201,10 +198,8 @@ nav{
             justify-content: center;
             text-align: center;
 
-            
-
             .skill{
-                width: 50%;
+                width: 48%;
                 margin-left: 25%;
                 margin-bottom: 15%;
                 display: grid;
@@ -223,9 +218,9 @@ nav{
                     align-items: center;
                     
                     img{
-                        margin-top: 12%;
+                        margin: 10%;
                         width: 80%;
-                        height: 80%;
+                        height: 60%;
 
                     }
                 }
@@ -256,8 +251,6 @@ nav{
     }
     .skills:nth-child(3){
         grid-area: skill2;
-        margin-left: 10%;
-
         .container{
             grid-template-columns: 1fr 1fr;
        }
@@ -297,7 +290,7 @@ nav{
         }
 
         .darkMode{
-            right: 10% ;
+            right: 1% ;
             margin: .7rem ;
             position: absolute;
         }
@@ -322,7 +315,7 @@ nav{
     }
 
 // SKILLS-----------------------
-    .section:nth-child(3){
+    #skills{
         grid-template-columns: 3fr 2fr;
         grid-template-areas: 
         "title title"

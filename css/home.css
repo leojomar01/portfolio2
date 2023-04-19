@@ -1,5 +1,147 @@
+#home {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "pic" "text";
+  padding: 1rem;
+  justify-content: center;
+}
+#home .text {
+  grid-area: text;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+#home .text .info {
+  width: 90%;
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: fadeInLeft 1s forwards;
+  margin-bottom: 35%;
+}
+#home .text .info .name {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+#home .text .info .jobTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+#home .text .links {
+  opacity: 0;
+  padding-left: 2rem;
+  animation: fadeInLeft 1s forwards;
+  animation-delay: 0.3s;
+}
+#home .text .links ul {
+  display: flex;
+  flex-direction: row;
+  gap: 0 2rem;
+}
+#home .text .links ul li {
+  list-style: none;
+}
+#home .text .links ul li i {
+  font-size: 2rem;
+}
+#home .text .links ul li i:hover {
+  color: var(--navfonthover);
+}
+#home .text .links ul li a[title] {
+  position: relative;
+}
+#home .text .links ul li a[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  font-size: 0.8rem;
+  font-weight: 700;
+  bottom: -200%;
+  left: 0%;
+}
+#home .pic {
+  grid-area: pic;
+  display: grid;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
 #home .pic img {
   aspect-ratio: 1/1;
-  width: 20vw;
-  border-radius: 1rem;
+  animation: fadeInRight 1s forwards;
+  opacity: 0;
+  width: 50vw;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 600px) {
+  #home {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "text pic";
+  }
+  #home .text {
+    grid-area: text;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  #home .text .info {
+    width: 90%;
+    font-size: 1.2rem;
+    margin-bottom: 35%;
+  }
+  #home .text .info .name {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  #home .text .info .jobTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  #home .text .links {
+    padding-left: 2rem;
+  }
+  #home .text .links ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0 2rem;
+  }
+  #home .text .links ul li {
+    list-style: none;
+  }
+  #home .text .links ul li i {
+    font-size: 2rem;
+  }
+  #home .text .links ul li i:hover {
+    color: var(--navfonthover);
+  }
+  #home .text .links ul li a[title] {
+    position: relative;
+  }
+  #home .text .links ul li a[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: 700;
+    bottom: -200%;
+    left: 0%;
+  }
+  #home .pic {
+    grid-area: pic;
+    display: grid;
+    justify-content: center;
+  }
+  #home .pic img {
+    aspect-ratio: 1/1;
+    animation: fadeInRight 1s forwards;
+    opacity: 0;
+    width: 20vw;
+    border-radius: 50%;
+  }
 }/*# sourceMappingURL=home.css.map */

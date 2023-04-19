@@ -11,10 +11,13 @@
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/projects.css">
+    <link rel="stylesheet" href="./css/about.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
+    
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1ec4f1fb85.js" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
@@ -25,6 +28,7 @@
             <div class="logo"><a href="#home">Leo</a></div>
             <ul class="menuItems">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -43,30 +47,94 @@
        
         <!-- --------------------HOME -------------------- -->
         <div class="section" id="home">
-            <div class="name">
-                <span>Hi, I'm Leo Jomar Reyes</span>
-                <span>Full Stack Developer</span>
-                <span>with a passion for building robust, user-friendly web applications.</span>
-                <span>I have honed my skills in front-end and back-end development, as well as database design and management.</span>
-            </div>
-            <div>
-                <span>My approach to development is to focus on creating scalable, maintainable, and efficient code that meets the needs of both the end user and the business. I believe in building applications that not only look great, but also provide a seamless and enjoyable user experience.</span>
-            </div>
             <div class="pic">
                 <img src="./images/pic.jpg" alt="">
             </div>
-
-
-            <div class="links">
-                <ul>
-                    <li><span><a href=""></a></span></li>
-                    <li><span><a href=""></a></span></li>
-                    <li><span><a href=""></a></span></li>
-                </ul>
+            <div class="text">
+                <div class="info">
+                    <div class="name">Hi, I'm Leo Jomar Reyes</div>
+                    <span class="jobTitle">Full Stack Developer</span>
+                    <span>with a passion for building robust, user-friendly web applications.</span>
+                    <span>I have honed my skills in front-end and back-end development, as well as database design and management.</span>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><span><a href="https://codepen.io/leojomar01" title="Codepen"><i class="fa-brands fa-codepen"></i></a></span></li>
+                        <li><span><a href="https://github.com/leojomar01" title="Github"><i class="fa-brands fa-github"></i></a></span></li>
+                        <li><span><a href="Leo Jomar Reyes Resume.pdf.pdf" download title="CV Download"><i class="fa-solid fa-file-arrow-down"></i></a></span></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
+        <div class="section" id="about"> 
+            <div class="aboutMe">
+                <h1>About me</h1>
+                <div class="pic"><img src="images/about.jpg" alt=""></div>
+                <p>I have gained valuable job experience over the past 8 years, working as a freelance graphic artist and developing Java applications for students' capstone projects. However, I recently realized my passion for programming and decided to enhance my skills by enrolling in Kodego to become a full-stack developer. Although I currently lack job experience in web development, I am committed to continuously exploring and learning in this field to improve my skills.
+                </p>
+            </div>
+            <div class="education">
+                <h2>Education</h2>
+                <div class="pic"><img src="images/educ.jpg" alt=""></div>
+                <div class="container">
+                    <div class="card">
+                        <div class="icon"><i class="fa-solid fa-user-graduate"></i></div>
+                        <div class="eduInfo">
+                            <div class="year">2022</div>
+                            <div class="course">Full-Stack Web Development</div>
+                            <div class="school">KodeGo Bootcamp</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><i class="fa-solid fa-user-graduate"></i></div>
+                        <div class="eduInfo">
+                            <div class="year">2012 - 2014</div>
+                            <div class="course">Information Technology</div>
+                            <div class="school">St. Elizabeth Global Institute</div>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+            <div class="certAwards">
+                <h2>Certificates & Awards</h2>
+                <div class="container">
+                    <div class="card">
+                        <div class="icon"><i class="fa-solid fa-award"></i></div>
+                        <div class="eduInfo">
+                            <div class="year">2022</div>
+                            <div class="award">Grand Winner (<a href="#tellme">Tell Me</a>)</div>
+                            <div class="from">Concati x Kodego Hackathon</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><i class="fa-solid fa-award"></i></div>
+                        <div class="eduInfo">
+                            <div class="year">2022</div>
+                            <div class="award">Best in Capstone (<a href="#klrtutorials">KLR Tutorials</a>)</div>
+                            <div class="from">KodeGo</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><i class="fa-solid fa-certificate"></i></div>
+                        <div class="eduInfo">
+                            <div class="year">2014</div>
+                            <div class="certificate">Programming NC III</div>
+                            <div class="from">St. Elizabeth Global Institute</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><i class="fa-solid fa-certificate"></i></div>
+                        <div class="eduInfo">
+                            <div class="year">2014</div>
+                            <div class="certificate">Hardware Servicing NC II</div>
+                            <div class="from">St. Elizabeth Global Institute</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- ----------------SKILLS---------------------- -->
         <div class="section" id="skills">
@@ -75,56 +143,56 @@
                 <h3>Web Development Skills</h3>
                 <div class="container">
                     <div class="skill">
-                        <span><img src="" alt=""></span>
+                        <span><img src="images/html.png" alt=""></span>
                         <span class="html">HTML</span>
                         <span class="3"></span>
                     </div>
                     <div class="skill">
-                        <span><img src="" alt=""></span>
+                        <span><img src="images/css-3.png" alt=""></span>
                         <span class="css">CSS</span>
                         <span class="3"></span>
 
                     </div>
                     <div class="skill">
-                        <span><img src="" alt=""></span>
+                        <span><img src="images/sass.png" alt=""></span>
                         <span class="sass">Sass</span>
                         <span class="3"></span>
-
                     </div>
                     <div class="skill">
-                        <span><img src="" alt=""></span>
+                        <span><img src="images//js.png" alt=""></span>
                         <span class="javascript">JavaScript</span>
                         <span class="3"></span>
 
                     </div>
                     <div class="skill">
-                        <span><img src="" alt=""></span>
+                        <span><img src="images/pngegg.png" alt=""></span>
                         <span class="jquery">Jquery</span>
                         <span class="2"></span>
 
                     </div>
                     <div class="skill">
-                        <span><img src="" alt=""></span>
+                        <span><img src="images/physics.png" alt=""></span>
                         <span class="react">React</span>
                         <span class="2"></span>
 
                     </div>
                     <div class="skill">
-                        <span><img src="" alt=""></span>
+                        <span><img src="images/php.png" alt=""></span>
                         <span class="php">PHP</span>
                         <span class="3"></span>
 
                     </div>
+                    
                     <div class="skill">
-                        <span><img src="" alt=""></span>
-                        <span class="express">Express</span>
-                        <span class="2"></span>
+                        <span><img src="images/mysql.png" alt=""></span>
+                        <span class="mysql">MySQL</span>
+                        <span class="3"></span>
 
                     </div>
                     <div class="skill">
-                        <span><img src="" alt=""></span>
-                        <span class="mysql">MySQL</span>
-                        <span class="3"></span>
+                        <span><img src="images/pngwing.com.png" alt=""></span>
+                        <span class="MongoDB">MongoDB</span>
+                        <span class="1"></span>
 
                     </div>
                 </div>
@@ -134,30 +202,30 @@
                 <h3>Other Skills</h3>
                 <div class="container">
                     <div class="skill">
-                        <span><img src="" alt=""></span>
+                        <span><img src="images/photoshop.png" alt=""></span>
                         <span class="photoshop">Photoshop</span>
                         <span class="2"></span>
 
                     </div>
                     <div class="skill">
-                        <span><img src="" alt=""></span>
+                        <span><img src="images/github (1).png" alt=""></span>
                         <span class="git">Git</span>
                         <span class="2"></span>
 
                     </div>
                     <div class="skill">
-                        <span><img src="" alt=""></span>
+                        <span><img src="images/vscode.png" alt=""></span>
                         <span class="vscode">VS Code</span>
                         <span class="2"></span>
 
                     </div>
                     <div class="skill">
-                        <span><img src="" alt=""></span>
+                        <span><img src="images/c-.png" alt=""></span>
                         <span class="c++">C++</span>
                         <span class="1"></span>
                     </div>
                     <div class="skill">
-                        <span><img src="" alt=""></span>
+                        <span><img src="images/java.png" alt=""></span>
                         <span class="java">Java</span>
                         <span class="1"></span>
 
@@ -170,27 +238,85 @@
 
         <!-- --------------------PROJECTS -------------------- -->
         <div class="section" id="projects">
-            <h2>Projects</h2>
+            <h1>Projects</h1>
             <div class="container">
-                <div class="card">
-                    <div class="title">title</div>
-                    <div class="image"><img src="" alt=""></div>
-                    <div class="info">Info</div>
+                <div class="card" id="klrtutorials">
+                    <div class="title"><span>KLR Tutorials</span></div>
+                    <div class="image"><img src="images/capstone.png" alt=""></div>
+                    <div class="info"><span>A website that creates a connection for tutors and students is a platform that allows students to find and connect with tutors who can provide academic support in various subjects.</span></div>
                     <div class="links">
-                        <span><a href="" title="Repository"><i class="bi bi-code-slash"></i></a></span>
-                        <span><a href="" title="LiveLink"><i class="bi bi-link"></i></a></span>
+                        <p>Repo link unavailable for code Privacy</p>
+                        <span><a href="https://klr-tutorials.herokuapp.com/" title="Live Link"><i class="bi bi-link"></i></a></span>
+                    </div>
+                </div>
+
+                <div class="card" id="tellme">
+                    <div class="title"><span>Tell Me</span></div>
+                    <div class="image"><img src="images/telleme.png" alt=""></div>
+                    <div class="info"><span>A confession site is a website where users can anonymously share their confessions or secrets with others. These sites often feature a simple interface where users can submit their confessions, and other users can read and respond to them. Using Concati API</span></div>
+                    <div class="links">
+                        <span><a href="https://github.com/leojomar01/tellme" title="Repository"><i class="bi bi-code-slash"></i></a></span>
+                        <span><a href="https://tellme-mu.vercel.app/" title="Live Link"><i class="bi bi-link"></i></a></span>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="title">title</div>
-                    <div class="image"><img src="" alt=""></div>
-                    <div class="info">Info</div>
+                    <div class="title"><span>EZ.com</span></div>
+                    <div class="image"><img src="images/minproj2.png" alt=""></div>
+                    <div class="info"><span>A job-hunting site is a website or application where job seekers can search and apply for job openings posted by employers. </span></div>
                     <div class="links">
-                        <span><a href="" title="Repository"><i class="bi bi-code-slash"></i></a></span>
-                        <span><a href="" title="Live Link"><i class="bi bi-link"></i></a></span>
+                        <span><a href="https://github.com/leojomar01/MiniProject-2" title="Repository"><i class="bi bi-code-slash"></i></a></span>
+                        <span><a href="https://leojomar01.github.io/MiniProject-2/" title="LiveLink"><i class="bi bi-link"></i></a></span>
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="title"><span>Interactive Portfolio</span></div>
+                    <div class="image"><img src="images/Iportfolio.png" alt=""></div>
+                    <div class="info"><span>Compilation of my projects and activities while
+                        learning to become a full stack dev
+                        inspire by Robby Leonardi</span></div>
+                    <div class="links">
+                        <span><a href="https://github.com/leojomar01/I-Portfolio" title="Repository"><i class="bi bi-code-slash"></i></a></span>
+                        <span><a href="https://leojomar01.github.io/I-Portfolio/" title="Live Link"><i class="bi bi-link"></i></a></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2>Others</h2>
+            <div class="container">
+                <div class="card">
+                    <div class="title"><span>Calculator</span></div>
+                    <div class="image"><img src="images/calcu.jpg" alt=""></div>
+                    <div class="info"><span> First project with SASS simple calculator with different styles.</span></div>
+                    <div class="links">
+                        <span><a href="https://github.com/leojomar01/Digital_Calculator" title="Repository"><i class="bi bi-code-slash"></i></a></span>
+                        <span><a href="https://leojomar01.github.io/Digital_Calculator/" title="LiveLink"><i class="bi bi-link"></i></a></span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title"><span>Lemonades</span></div>
+                    <div class="image"><img src="images/lemonades.png" alt=""></div>
+                    <div class="info"><span>Homepage for lemonades website with advance animation. From Wilson Wings design concept from youtube ( not mobile responsive)</span></div>
+                    <div class="links">
+                        <span><a href="https://github.com/leojomar01/lemonades" title="Repository"><i class="bi bi-code-slash"></i></a></span>
+                        <span><a href="https://leojomar01.github.io/lemonades/" title="Live Link"><i class="bi bi-link"></i></a></span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title"><span>Chat-app</span></div>
+                    <div class="image"><img src="images/chat.png" alt=""></div>
+                    <div class="info"><span>Chat-app using MERN stack with real time notification and chats</span></div>
+                    <div class="links">
+                        <span><a href="https://github.com/leojomar01/chat-app" title="Repository"><i class="bi bi-code-slash"></i></a></span>
+                    </div>
+                </div>
+
+               
+
             </div>
         </div>
         <!-- --------------------CONTACT -------------------- -->
@@ -202,7 +328,7 @@
                     <li><span><i class="bi bi-messenger"></i> Messenger: </span><a href="https://m.me/lyralei037" target="_blank">lyralei037</a></li>
                 </ul>
             </div>
-            <form class="contactForm">
+            <form class="contactForm" id="contactForm">
                 <h2> <i class="bi bi-chat-dots-fill"></i> Send me a message</h2>
                 <div>
                     <input type="text" name="name" id="name" placeholder=" " required autocomplete="off">
@@ -216,6 +342,7 @@
                     <textarea name="message" id="message" cols="30" rows="10" placeholder=" " required autocomplete="off"></textarea>
                     <label for="email">Message</label>
                 </div>
+                <p class="messageAlert"></p>
                 <div>
                     <button type="submit">Send <i class="bi bi-send-fill"></i></button>
                 </div>
@@ -228,4 +355,6 @@
 </body>
 
 <script src="./js/index.js"></script>
+<script src="./js/email.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </html>

@@ -1,0 +1,286 @@
+#about .aboutMe {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: "title" "div" "pic";
+  margin-bottom: 2rem;
+}
+#about .aboutMe h1 {
+  grid-area: title;
+  opacity: 0;
+}
+#about .aboutMe p {
+  text-indent: 3rem;
+  grid-area: div;
+  text-align: justify;
+  margin-top: 3rem;
+  font-weight: 600;
+  padding: 2rem;
+  opacity: 0;
+}
+#about .aboutMe .pic {
+  grid-area: pic;
+  opacity: 0;
+  justify-self: center;
+}
+#about .pic {
+  height: 200px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+}
+#about .pic img {
+  height: 100%;
+}
+#about .education {
+  grid-template-areas: "title" "container" "pic";
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 2rem;
+}
+#about .education h2 {
+  grid-area: title;
+  margin: 0 5rem;
+  margin-bottom: 3rem;
+  opacity: 0;
+}
+#about .education .pic {
+  grid-area: pic;
+  opacity: 0;
+  justify-self: center;
+}
+#about .education .container {
+  opacity: 0;
+  grid-area: container;
+}
+#about .education .container .card {
+  border-radius: 1rem;
+  padding: 1rem;
+  height: 20vh;
+  background-color: var(--bg2);
+  margin-bottom: 1rem;
+  display: flex;
+}
+#about .education .container .card .icon {
+  padding: 1rem;
+}
+#about .education .container .card .icon i {
+  font-size: 2rem;
+}
+#about .education .container .card .eduInfo {
+  margin-left: 1rem;
+}
+#about .education .container .card .eduInfo .year {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+#about .education .container .card .eduInfo .course {
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+#about .education .container .card .eduInfo .school {
+  font-weight: 600;
+}
+#about .education .container .card:hover {
+  background-color: var(--nav2);
+}
+#about .certAwards h2 {
+  margin: 0 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  opacity: 0;
+}
+#about .certAwards .container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+#about .certAwards .container .card {
+  opacity: 0;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: 20vh;
+  background-color: var(--bg2);
+  display: flex;
+  margin: 0 0.5rem;
+}
+#about .certAwards .container .card .icon {
+  padding: 0.5rem;
+}
+#about .certAwards .container .card .icon i {
+  font-size: 2rem;
+}
+#about .certAwards .container .card .eduInfo {
+  margin-left: 0.5rem;
+}
+#about .certAwards .container .card .eduInfo .year {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+#about .certAwards .container .card .eduInfo .certificate, #about .certAwards .container .card .eduInfo .award {
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  font-size: 1rem;
+}
+#about .certAwards .container .card .eduInfo .from {
+  font-weight: 600;
+}
+#about .certAwards .container .card:hover {
+  background-color: var(--nav2);
+}
+
+#about.active .aboutMe h1, #about.active .aboutMe p {
+  animation: fadeInLeft 1s forwards;
+}
+#about.active .aboutMe .pic {
+  animation: fadeInRight 1s forwards;
+}
+#about.active .education h2, #about.active .education .container {
+  animation: fadeInRight 1s forwards;
+  animation-delay: 0.5s;
+}
+#about.active .education .pic {
+  animation: fadeInLeft 1s forwards;
+  animation-delay: 0.5s;
+}
+#about.active .certAwards h2 {
+  animation: fadeInLeft 1s forwards;
+  animation-delay: 1s;
+}
+#about.active .certAwards .container .card:nth-child(odd) {
+  animation: fadeInLeft 1s forwards;
+  animation-delay: 1.5s;
+}
+#about.active .certAwards .container .card:nth-child(even) {
+  animation: fadeInRight 1s forwards;
+  animation-delay: 1.5s;
+}
+
+@media only screen and (min-width: 600px) {
+  #about .aboutMe {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: 4fr 2fr;
+    grid-template-areas: "title . " "div pic";
+    margin-bottom: 2rem;
+  }
+  #about .aboutMe h1 {
+    grid-area: title;
+    margin-bottom: 2rem;
+  }
+  #about .aboutMe p {
+    grid-area: div;
+    text-align: justify;
+    margin-top: 3rem;
+    font-weight: 600;
+  }
+  #about .aboutMe .pic {
+    grid-area: pic;
+    margin-left: 5rem;
+  }
+  #about .pic {
+    height: 300px;
+    aspect-ratio: 1/1;
+  }
+  #about .pic img {
+    height: 100%;
+  }
+  #about .education {
+    grid-template-areas: ". title" "pic container";
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 2rem;
+  }
+  #about .education h2 {
+    grid-area: title;
+    margin: 0 5rem;
+    margin-bottom: 3rem;
+  }
+  #about .education .pic {
+    grid-area: pic;
+  }
+  #about .education .container {
+    grid-area: container;
+  }
+  #about .education .container .card {
+    border-radius: 1rem;
+    margin: 0 5rem;
+    padding: 1rem;
+    height: 20vh;
+    background-color: var(--bg2);
+    margin-bottom: 1rem;
+    display: flex;
+  }
+  #about .education .container .card .icon {
+    padding: 1rem;
+  }
+  #about .education .container .card .icon i {
+    font-size: 2rem;
+  }
+  #about .education .container .card .eduInfo {
+    margin-left: 1rem;
+  }
+  #about .education .container .card .eduInfo .year {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  #about .education .container .card .eduInfo .course {
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+  #about .education .container .card .eduInfo .school {
+    font-weight: 600;
+  }
+  #about .education .container .card:hover {
+    background-color: var(--nav2);
+  }
+  #about .certAwards h2 {
+    margin: 0 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  #about .certAwards .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  #about .certAwards .container .card {
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 20vh;
+    background-color: var(--bg2);
+    display: flex;
+  }
+  #about .certAwards .container .card .icon {
+    padding: 1rem;
+  }
+  #about .certAwards .container .card .icon i {
+    font-size: 2rem;
+  }
+  #about .certAwards .container .card .eduInfo {
+    margin-left: 1rem;
+  }
+  #about .certAwards .container .card .eduInfo .year {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  #about .certAwards .container .card .eduInfo .certificate, #about .certAwards .container .card .eduInfo .award {
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+  #about .certAwards .container .card .eduInfo .from {
+    font-weight: 600;
+  }
+  #about .certAwards .container .card:hover {
+    background-color: var(--nav2);
+  }
+}/*# sourceMappingURL=about.css.map */

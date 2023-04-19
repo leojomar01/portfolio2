@@ -1,0 +1,352 @@
+#about{
+   
+    .aboutMe{
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title"
+        "div"
+        "pic";
+        margin-bottom: 2rem;
+        h1{
+            grid-area:title ;
+            opacity: 0;
+
+        }
+        p{
+            text-indent: 3rem;
+            grid-area: div;
+            text-align: justify;
+            margin-top: 3rem;
+            font-weight: 600;
+            padding: 2rem;
+            opacity: 0;
+
+        }
+        .pic{
+            grid-area: pic;
+            opacity: 0;
+            justify-self: center;
+
+        }
+    }
+    .pic{
+        height: 200px;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        img{
+            height: 100%;
+        }
+    }
+
+    .education{
+        grid-template-areas: "title"
+        "container"
+        "pic" ;
+        display:grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+
+        h2{
+            grid-area: title;
+            margin: 0 5rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+
+        }
+        .pic{
+            grid-area: pic;
+            opacity: 0;
+            justify-self: center;
+
+        }
+        .container{
+            opacity: 0;
+            grid-area: container;
+            .card{
+                border-radius: 1rem;
+                padding: 1rem;
+                height: 20vh;
+                background-color: var(--bg2);
+
+                margin-bottom: 1rem;
+                display: flex;
+                .icon{
+                    padding: 1rem;
+                    i{
+                        font-size: 2rem;
+
+                    }
+                }
+                .eduInfo{
+                    margin-left: 1rem;
+                    .year{
+                        margin-bottom: 1rem;
+                        font-weight: 700;
+                        font-size: .8rem;
+
+                    }
+                    .course{
+                        margin-bottom: .5rem;
+                        font-weight: 800;
+                    }
+                    .school{
+                        font-weight: 600;
+                    }
+                }
+                &:hover{
+                    background-color: var(--nav2);
+                }
+            }
+        }
+    }
+
+    .certAwards{
+        h2{
+            margin: 0 5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            opacity: 0;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap:1rem;
+            margin-bottom: 2rem;
+            .card{
+                opacity: 0;
+                border-radius: 1rem;
+                padding: 1rem;
+                height: 20vh;
+                background-color: var(--bg2);
+                display: flex;
+                margin: 0 .5rem;
+                .icon{
+                    padding: .5rem;
+                    i{
+                        font-size: 2rem;
+                    }
+                }
+                .eduInfo{
+                    margin-left: .5rem;
+
+                    .year{
+                        margin-bottom: 1rem;
+                        font-weight: 700;
+                        font-size: .8rem;
+                        
+                    }
+                    .certificate,.award{
+                        margin-bottom: .5rem;
+                        font-weight: 800;
+                        font-size: 1rem;
+
+                    }
+                    .from{
+                        font-weight: 600;
+
+                    }
+                }
+
+                &:hover{
+                    background-color: var(--nav2);
+                }
+            }
+        }
+    }
+}
+
+#about.active{
+    .aboutMe{
+        h1,p{
+            animation: fadeInLeft 1s forwards ;
+        }
+        .pic{
+
+            animation: fadeInRight 1s forwards ;
+        }
+    }
+
+    .education{
+        h2,.container{
+            animation: fadeInRight 1s forwards ;
+            animation-delay: .5s;
+
+        }
+        .pic{
+            animation: fadeInLeft 1s forwards ;
+            animation-delay: .5s;
+
+
+        }
+    }
+    .certAwards{
+        h2{
+            animation: fadeInLeft 1s forwards ;
+            animation-delay: 1s;
+
+        }
+        .container{
+            .card:nth-child(odd){
+                animation: fadeInLeft 1s forwards ;
+                animation-delay: 1.5s;
+
+            }
+            .card:nth-child(even){
+                animation: fadeInRight 1s forwards ;
+                animation-delay: 1.5s;
+
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #about{
+
+        .aboutMe{
+            display: grid;
+            justify-content: center;
+            text-align: center;
+            grid-template-columns: 4fr 2fr;
+            grid-template-areas: "title . "
+            "div pic";
+    
+            margin-bottom: 2rem;
+    
+            h1{
+                grid-area:title ;
+                margin-bottom: 2rem;
+            }
+            p{
+                grid-area: div;
+                text-align: justify;
+                margin-top: 3rem;
+                font-weight: 600;
+                
+            }
+            .pic{
+                grid-area: pic;
+                margin-left:  5rem;
+            }
+        }
+        .pic{
+            height: 300px;
+            aspect-ratio: 1/1;
+            img{
+                height: 100%;
+            }
+        }
+    
+        .education{
+            grid-template-areas: ". title"
+            "pic container";
+            display:grid;
+            grid-template-columns: 1fr 2fr;
+            margin-bottom: 2rem;
+    
+            h2{
+                grid-area: title;
+                margin: 0 5rem;
+                margin-bottom: 3rem;
+    
+            }
+            .pic{
+                grid-area: pic;
+            }
+            .container{
+                grid-area: container;
+                .card{
+                    border-radius: 1rem;
+                    margin: 0 5rem;
+                    padding: 1rem;
+                    height: 20vh;
+                    background-color: var(--bg2);
+    
+                    margin-bottom: 1rem;
+                    display: flex;
+                    .icon{
+                        padding: 1rem;
+                        i{
+                            font-size: 2rem;
+    
+                        }
+                    }
+                    .eduInfo{
+                        margin-left: 1rem;
+                        .year{
+                            margin-bottom: 1rem;
+                            font-weight: 700;
+                            font-size: .8rem;
+    
+                        }
+                        .course{
+                            margin-bottom: .5rem;
+                            font-weight: 800;
+                            font-size: 1.2rem;
+                        }
+                        .school{
+                            font-weight: 600;
+                        }
+                    }
+                    &:hover{
+                        background-color: var(--nav2);
+                    }
+                }
+            }
+        }
+    
+        .certAwards{
+            h2{
+                margin: 0 5rem;
+                margin-bottom: 3rem;
+                text-align: center;
+            }
+            .container{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap:1rem;
+                .card{
+                    border-radius: 1rem;
+                    padding: 1rem;
+                    height: 20vh;
+                    background-color: var(--bg2);
+                    display: flex;
+                    .icon{
+                        padding: 1rem;
+                        i{
+                            font-size: 2rem;
+                        }
+                    }
+                    .eduInfo{
+                        margin-left: 1rem;
+    
+                        .year{
+                            margin-bottom: 1rem;
+                            font-weight: 700;
+                            font-size: .8rem;
+                            
+                        }
+                        .certificate,.award{
+                            margin-bottom: .5rem;
+                            font-weight: 800;
+                            font-size: 1.2rem;
+    
+                        }
+                        .from{
+                            font-weight: 600;
+    
+                        }
+                    }
+    
+                    &:hover{
+                        background-color: var(--nav2);
+                    }
+                }
+            }
+        }
+    }
+    
+}

@@ -8,21 +8,24 @@ $('.darkMode').click(function(){
   $(this).toggleClass('active');
 
   if($(this).hasClass('active')){
+    //darkmode
     $(":root").css({
       '--bg': '#494949',
       '--font': '#e9e9e9',
       '--navfont': '#494949',
-      '--navfonthover': '#bdbdbd',
-      '--nav': '#ffffff'
+      '--navfonthover': '#747474',
+      '--nav': '#e9e9e9',
+      '--bg2': '#2e2e2e'
     });
   }
   else{
     $(":root").css({
-      '--bg': '#e9e9e9',
+      '--bg': '#ffffff',
       '--font': '#000000',
       '--navfont': '#ffffff',
       '--navfonthover': '#bdbdbd',
-      '--nav': '#494949'
+      '--nav': '#494949',
+      '--bg2':'#e9e9e9'
     });
   }
 })

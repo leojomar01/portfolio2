@@ -1,37 +1,66 @@
 #projects{
     text-align: center;
+    padding: 5vh;
+    display: grid;
+    justify-content: center;
 
-    
-    h2{
-
-    }
     .container{
         margin-top: 10vh;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
+        gap: 1rem;
+        
         .card{
-            width: 40vw;
-            height: 70vh;
+            width: 80vw;
+            height: 40vh;
             display: flex;
             flex-direction: column;
             justify-content: center;  
             align-items: center;  
-            border: 1px solid red;
-            padding: 1rem;        
-            .title{
+            background-color: var(--bg2);
+            border: 1px solid gray;
+            border-radius: 1rem;
+            padding: 1rem;  
+            opacity: 0;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1rem;
 
+            .title{
+                span{
+                    font-size: 1.8rem;
+                }
             }
             .image{
                 height: 80%;
                 width: 80%;
                 border: 1px solid gray;
+                margin: .5rem;
 
                 img{
                     height: 100%;
                     width: 100%;
                 }
             }
-            .info{}
+            .info{
+                position: absolute;
+                width: 95%;
+                top: 20%;
+                left: -100%;
+                height: 50%;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                border-radius:0 1rem 1rem 0;
+                background-color: white;
+                // backdrop-filter: blur(20px);
+                opacity: .7;
+                border: .1rem solid rgb(39, 39, 39, .5);
+                padding: 1rem;
+                span{
+                    color: rgb(5, 5, 5);
+                    font-weight:600 ;
+                    // text-shadow: -1px -2px 0 #000, 1px -2px 0 #000, -1px 2px 0 #000, 1px 2px 0 #000;
+                }
+            }
             .links{
                 display: flex;
                 gap: 2rem;
@@ -50,12 +79,148 @@
                         &:hover{
                             color: var(--navfonthover);
                         }
-                        i{
-                           
+                    }
+                }
+            }
+            //HOVER EFFECT
+            &:hover{
+                .image{
+                    img{
+                        filter: brightness(20%);
+                    }
+                }
+                .info{
+                    left: 0;
+                    transition: 1s;
+                }
+            }
+        }
+    }
+}
+
+#projects.active{
+    .container{
+
+        .card:nth-child(odd){
+            animation: fadeInLeft 1s forwards ;
+        }
+        .card:nth-child(even){
+            animation: fadeInRight 1s forwards ;
+        }
+        
+        .card:nth-child(3),.card:nth-child(4){
+            animation-delay: .3s ;
+        }
+        .card:nth-child(5),.card:nth-child(6){
+            animation-delay: .6s ;
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 600px) {
+    #projects{
+        text-align: center;
+        padding: 5vh;
+        display: grid;
+        justify-content: center;
+        
+        h2{
+    
+        }
+        .container{
+            margin-top: 10vh;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 2rem;
+            
+            .card{
+                width: 40vw;
+                height: 60vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;  
+                align-items: center;  
+                background-color: var(--bg2);
+                border: 1px solid gray;
+                border-radius: 1rem;
+                padding: 1rem;  
+                opacity: 0;
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 2rem;
+    
+                .title{
+                    span{
+                        font-size: 1.8rem;
+                    }
+                }
+                .image{
+                    height: 80%;
+                    width: 80%;
+                    border: 1px solid gray;
+                    margin: .5rem;
+    
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .info{
+                    position: absolute;
+                    width: 95%;
+                    top: 20%;
+                    left: -100%;
+                    height: 50%;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    border-radius:0 1rem 1rem 0;
+                    background-color: white;
+                    // backdrop-filter: blur(20px);
+                    opacity: .7;
+                    border: .1rem solid rgb(39, 39, 39, .5);
+                    padding: 1rem;
+                    span{
+                        color: rgb(5, 5, 5);
+                        font-weight:600 ;
+                        // text-shadow: -1px -2px 0 #000, 1px -2px 0 #000, -1px 2px 0 #000, 1px 2px 0 #000;
+                    }
+                }
+                .links{
+                    display: flex;
+                    gap: 2rem;
+                    span{
+                        border-radius: 50%;
+                        border: 1px solid var(--font);
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        a{
+                            font-size: 2rem;
+                            position: relative;
+                            color: var(--font);
+                            &:hover{
+                                color: var(--navfonthover);
+                            }
                         }
+                    }
+                }
+                //HOVER EFFECT
+                &:hover{
+                    .image{
+                        img{
+                            filter: brightness(20%);
+                        }
+                    }
+                    .info{
+                        left: 0;
+                        transition: 1s;
                     }
                 }
             }
         }
     }
+    
 }

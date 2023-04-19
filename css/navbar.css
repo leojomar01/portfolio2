@@ -60,7 +60,6 @@ nav .darkMode:hover, nav .menu:hover {
 }
 nav .menu {
   right: 1%;
-  border: blue 1px solid;
 }
 nav .menu .icon:nth-child(2) {
   opacity: 0;
@@ -108,77 +107,76 @@ nav .menuItems.active {
   height: 300%;
 }
 
-.section:nth-child(3).active h2 {
+#skills.active h2 {
   margin-top: 0vh;
   font-size: 1.8rem;
   transition: 0.5s all ease-in-out;
 }
-.section:nth-child(3).active .skills:nth-child(2) h3 {
+#skills.active .skills:nth-child(2) h3 {
   animation: fadeInLeft 1s forwards;
 }
-.section:nth-child(3).active .skills:nth-child(2) .container div {
+#skills.active .skills:nth-child(2) .container div {
   animation: fadeInLeft 1s forwards;
 }
-.section:nth-child(3).active .skills:nth-child(2) .container div:nth-child(-n+3) {
+#skills.active .skills:nth-child(2) .container div:nth-child(-n+3) {
   animation-delay: 0.3s;
 }
-.section:nth-child(3).active .skills:nth-child(2) .container div:nth-child(n+4) {
+#skills.active .skills:nth-child(2) .container div:nth-child(n+4) {
   animation-delay: 0.6s;
 }
-.section:nth-child(3).active .skills:nth-child(2) .container div:nth-child(n+7) {
+#skills.active .skills:nth-child(2) .container div:nth-child(n+7) {
   animation-delay: 0.9s;
 }
-.section:nth-child(3).active .skills:nth-child(3) h3 {
+#skills.active .skills:nth-child(3) h3 {
   animation: fadeInRight 1s forwards;
 }
-.section:nth-child(3).active .skills:nth-child(3) .container div {
+#skills.active .skills:nth-child(3) .container div {
   animation: fadeInRight 1s forwards;
 }
-.section:nth-child(3).active .skills:nth-child(3) .container div:nth-child(-n+2) {
+#skills.active .skills:nth-child(3) .container div:nth-child(-n+2) {
   animation-delay: 0.3s;
 }
-.section:nth-child(3).active .skills:nth-child(3) .container div:nth-child(n+3) {
+#skills.active .skills:nth-child(3) .container div:nth-child(n+3) {
   animation-delay: 0.6s;
 }
-.section:nth-child(3).active .skills:nth-child(3) .container div:nth-child(n+5) {
+#skills.active .skills:nth-child(3) .container div:nth-child(n+5) {
   animation-delay: 0.9s;
 }
 
-.section:nth-child(3) {
+#skills {
   padding-top: 10vh;
-  width: 100%;
   display: grid;
   text-align: center;
   grid-template-columns: 1fr;
   grid-template-rows: 10vh 1fr;
   grid-template-areas: "title" "skill1" "skill2";
 }
-.section:nth-child(3) h2 {
+#skills h2 {
   grid-area: title;
   color: var(--font);
   font-size: 0.1rem;
 }
-.section:nth-child(3) .skills:nth-child(2), .section:nth-child(3) .skills:nth-child(3) {
+#skills .skills:nth-child(2), #skills .skills:nth-child(3) {
   margin-top: 5vh;
 }
-.section:nth-child(3) .skills:nth-child(2) h3, .section:nth-child(3) .skills:nth-child(3) h3 {
+#skills .skills:nth-child(2) h3, #skills .skills:nth-child(3) h3 {
   opacity: 0;
 }
-.section:nth-child(3) .skills:nth-child(2) .container, .section:nth-child(3) .skills:nth-child(3) .container {
+#skills .skills:nth-child(2) .container, #skills .skills:nth-child(3) .container {
   margin-top: 5vh;
   display: grid;
   justify-content: center;
   text-align: center;
 }
-.section:nth-child(3) .skills:nth-child(2) .container .skill, .section:nth-child(3) .skills:nth-child(3) .container .skill {
-  width: 50%;
+#skills .skills:nth-child(2) .container .skill, #skills .skills:nth-child(3) .container .skill {
+  width: 48%;
   margin-left: 25%;
   margin-bottom: 15%;
   display: grid;
   justify-content: center;
   opacity: 0;
 }
-.section:nth-child(3) .skills:nth-child(2) .container .skill span:nth-child(1), .section:nth-child(3) .skills:nth-child(3) .container .skill span:nth-child(1) {
+#skills .skills:nth-child(2) .container .skill span:nth-child(1), #skills .skills:nth-child(3) .container .skill span:nth-child(1) {
   width: 60px;
   height: 80px;
   margin: auto;
@@ -188,36 +186,35 @@ nav .menuItems.active {
   border-radius: 25% 25% 35% 35%;
   align-items: center;
 }
-.section:nth-child(3) .skills:nth-child(2) .container .skill span:nth-child(1) img, .section:nth-child(3) .skills:nth-child(3) .container .skill span:nth-child(1) img {
-  margin-top: 12%;
+#skills .skills:nth-child(2) .container .skill span:nth-child(1) img, #skills .skills:nth-child(3) .container .skill span:nth-child(1) img {
+  margin: 10%;
   width: 80%;
-  height: 80%;
+  height: 60%;
 }
-.section:nth-child(3) .skills:nth-child(2) .container .skill span:nth-child(2), .section:nth-child(3) .skills:nth-child(3) .container .skill span:nth-child(2) {
+#skills .skills:nth-child(2) .container .skill span:nth-child(2), #skills .skills:nth-child(3) .container .skill span:nth-child(2) {
   margin-top: 0.3rem;
   position: relative;
   width: 6rem;
   font-weight: 800;
 }
-.section:nth-child(3) .skills:nth-child(2) .container .skill span:nth-child(3), .section:nth-child(3) .skills:nth-child(3) .container .skill span:nth-child(3) {
+#skills .skills:nth-child(2) .container .skill span:nth-child(3), #skills .skills:nth-child(3) .container .skill span:nth-child(3) {
   position: relative;
   width: 6rem;
   font-size: 0.8rem;
 }
-.section:nth-child(3) .skills:nth-child(2) .container .skill:hover img, .section:nth-child(3) .skills:nth-child(3) .container .skill:hover img {
+#skills .skills:nth-child(2) .container .skill:hover img, #skills .skills:nth-child(3) .container .skill:hover img {
   animation: bounce 0.3s linear;
 }
-.section:nth-child(3) .skills:nth-child(3) {
+#skills .skills:nth-child(3) {
   grid-area: skill2;
-  margin-left: 10%;
 }
-.section:nth-child(3) .skills:nth-child(3) .container {
+#skills .skills:nth-child(3) .container {
   grid-template-columns: 1fr 1fr;
 }
-.section:nth-child(3) .skills:nth-child(2) {
+#skills .skills:nth-child(2) {
   grid-area: skill1;
 }
-.section:nth-child(3) .skills:nth-child(2) .container {
+#skills .skills:nth-child(2) .container {
   grid-template-columns: 1fr 1fr;
 }
 
@@ -245,7 +242,7 @@ nav .menuItems.active {
     display: none;
   }
   nav .darkMode {
-    right: 10%;
+    right: 1%;
     margin: 0.7rem;
     position: absolute;
   }
@@ -266,11 +263,11 @@ nav .menuItems.active {
   nav ul li {
     margin: 1rem;
   }
-  .section:nth-child(3) {
+  #skills {
     grid-template-columns: 3fr 2fr;
     grid-template-areas: "title title" "skill1 skill2";
   }
-  .section:nth-child(3) .skills:nth-child(2) .container {
+  #skills .skills:nth-child(2) .container {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }/*# sourceMappingURL=navbar.css.map */
