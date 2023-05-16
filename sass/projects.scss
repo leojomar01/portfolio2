@@ -35,11 +35,13 @@
                 height: 80%;
                 width: 80%;
                 border: 1px solid gray;
+                border-radius: .5rem;
                 margin: .5rem;
 
                 img{
                     height: 100%;
                     width: 100%;
+                    border-radius: .5rem;
                 }
             }
             .info{
@@ -113,6 +115,9 @@
         }
         .card:nth-child(5),.card:nth-child(6){
             animation-delay: .6s ;
+        }
+        .card:nth-child(7),.card:nth-child(8){
+            animation-delay: .9s ;
         }
     }
 }
