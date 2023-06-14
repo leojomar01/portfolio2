@@ -111,6 +111,7 @@ nav .menuItems.active {
   margin-top: 0vh;
   font-size: 1.8rem;
   transition: 0.5s all ease-in-out;
+  animation: fadeInLeft 1s forwards;
 }
 #skills.active .skills:nth-child(2) h3 {
   animation: fadeInLeft 1s forwards;
@@ -158,6 +159,7 @@ nav .menuItems.active {
   grid-area: title;
   color: var(--font);
   font-size: 0.1rem;
+  opacity: 0;
 }
 #skills .skills:nth-child(2), #skills .skills:nth-child(3) {
   margin-top: 5vh;

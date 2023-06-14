@@ -3,7 +3,9 @@
     padding: 5vh;
     display: grid;
     justify-content: center;
-
+    h1{
+        opacity: 0;
+    }
     .container{
         margin-top: 10vh;
         display: grid;
@@ -101,6 +103,9 @@
 }
 
 #projects.active{
+    h1{
+        animation: fadeInLeft 1s forwards ;
+    }
     .container{
 
         .card:nth-child(odd){
