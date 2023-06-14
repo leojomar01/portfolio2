@@ -35,7 +35,7 @@ nav .darkMode, nav .menu {
 }
 nav .darkMode .icon, nav .menu .icon {
   position: absolute;
-  width: 2.5rem;
+  height: 2.5rem;
   aspect-ratio: 1/1;
   display: flex;
   justify-content: center;
